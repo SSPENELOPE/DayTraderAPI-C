@@ -18,8 +18,5 @@ namespace DayTraderProAPI.Infastructure.Identity
         }
         public DbSet<AppUser> AppUsers { get; set; }
 
-        protected IdentityContext()
-        {
-        }
     }
 }

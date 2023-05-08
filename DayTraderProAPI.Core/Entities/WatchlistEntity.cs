@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace DayTraderProAPI.Core.Entities
 {
-    [Table("watchlist")]
-    public class WatchlistEntity
+    public class WatchlistEntity 
     {
 
         public int WatchlistId { get; set; }

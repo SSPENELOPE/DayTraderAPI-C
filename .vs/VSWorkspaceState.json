@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\DayTraderProAPI.Core",
-    "\\DayTraderProAPI.Core\\Entities"
+    ""
   ],
-  "SelectedNode": "\\DayTraderProAPI.sln",
+  "SelectedNode": "\\DayTraderProAPI.csproj",
   "PreviewInSolutionExplorer": false
 }

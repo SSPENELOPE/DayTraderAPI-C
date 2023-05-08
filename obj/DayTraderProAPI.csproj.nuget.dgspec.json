@@ -32,7 +32,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\TJ\\Desktop\\Web Apps\\DayTraderPro-TBD\\DayTraderProAPI.Core\\DayTraderProAPI.Core.csproj": {
+                "projectPath": "C:\\Users\\TJ\\Desktop\\Web Apps\\DayTraderPro-TBD\\DayTraderProAPI.Core\\DayTraderProAPI.Core.csproj"
+              },
+              "C:\\Users\\TJ\\Desktop\\Web Apps\\DayTraderPro-TBD\\DayTraderProAPI.Infastructure\\DayTraderProAPI.Infastructure.csproj": {
+                "projectPath": "C:\\Users\\TJ\\Desktop\\Web Apps\\DayTraderPro-TBD\\DayTraderProAPI.Infastructure\\DayTraderProAPI.Infastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

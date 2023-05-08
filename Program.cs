@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using DayTraderProAPI.Core.Entities.Identity;
 using DayTraderProAPI.Infastructure.Identity;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,11 @@ var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").A
 // Add services to the container.
 
 builder.Services.AddDbContext<IdentityContext>(options =>
-options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
+options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<IdentityContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddControllers();
 

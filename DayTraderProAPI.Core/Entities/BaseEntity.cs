@@ -8,6 +8,21 @@ namespace DayTraderProAPI.Core.Entities
 {
     public class BaseEntity
     {
-        public int Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? ModifiedAt { get; set; }
+        public bool IsDeleted { get; set; }
+
+
+        public BaseEntity()
+        {
+            CreatedAt = DateTime.UtcNow;
+            IsDeleted = false;
+        }
+
+        public void SoftDelete()
+        {
+            IsDeleted = true;
+            ModifiedAt = DateTime.UtcNow;
+        }
     }
 }

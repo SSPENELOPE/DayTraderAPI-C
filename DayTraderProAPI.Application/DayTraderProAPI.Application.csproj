@@ -10,4 +10,9 @@
     <Folder Include="CustomService\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DayTraderProAPI.Core\DayTraderProAPI.Core.csproj" />
+    <ProjectReference Include="..\DayTraderProAPI.Infastructure\DayTraderProAPI.Infastructure.csproj" />
+  </ItemGroup>
+
 </Project>

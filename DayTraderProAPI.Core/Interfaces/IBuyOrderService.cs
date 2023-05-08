@@ -14,6 +14,7 @@ namespace DayTraderProAPI.Core.Interfaces
             string OrderType,
             decimal OrderAmount,
             string OrderDirection,
-            string CoinName);
+            string CoinName
+        );
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DayTraderProAPI.Core.Entities
 {
-    public class OrderEntity
+    public class OrderEntity : BaseEntity
     {
         public int OrderId { get; set; }
 

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DayTraderProAPI.Dtos
 {
-    [Table("Watchlist")]
+    [Table("watchlist")]
     public class WatchlistDto
     {
         public int WatchlistId { get; set; }

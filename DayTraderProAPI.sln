@@ -3,13 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTraderProAPI", "DayTraderProAPI.csproj", "{502C188C-2DAE-40A6-967F-BA80C1842E46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayTraderProAPI", "DayTraderProAPI.csproj", "{502C188C-2DAE-40A6-967F-BA80C1842E46}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B37A6062-18A2-4354-803E-388299D6B5A1} = {B37A6062-18A2-4354-803E-388299D6B5A1}
+		{BD8684A8-2D42-4599-BAE7-A360C57E4EE3} = {BD8684A8-2D42-4599-BAE7-A360C57E4EE3}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTraderProAPI.Core", "..\DayTraderProAPI.Core\DayTraderProAPI.Core.csproj", "{BD8684A8-2D42-4599-BAE7-A360C57E4EE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayTraderProAPI.Core", "..\DayTraderProAPI.Core\DayTraderProAPI.Core.csproj", "{BD8684A8-2D42-4599-BAE7-A360C57E4EE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{97C73807-C92B-48C4-B424-AAECBC9D3A16}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTraderProAPI.Infastructure", "..\DayTraderProAPI.Infastructure\DayTraderProAPI.Infastructure.csproj", "{B37A6062-18A2-4354-803E-388299D6B5A1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD8684A8-2D42-4599-BAE7-A360C57E4EE3} = {BD8684A8-2D42-4599-BAE7-A360C57E4EE3}
 	EndProjectSection
 EndProject
 Global
@@ -26,6 +35,10 @@ Global
 		{BD8684A8-2D42-4599-BAE7-A360C57E4EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD8684A8-2D42-4599-BAE7-A360C57E4EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD8684A8-2D42-4599-BAE7-A360C57E4EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B37A6062-18A2-4354-803E-388299D6B5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37A6062-18A2-4354-803E-388299D6B5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37A6062-18A2-4354-803E-388299D6B5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37A6062-18A2-4354-803E-388299D6B5A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

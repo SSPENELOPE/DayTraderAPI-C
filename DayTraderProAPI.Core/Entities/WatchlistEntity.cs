@@ -11,9 +11,9 @@ namespace DayTraderProAPI.Core.Entities
     [Table("watchlist")]
     public class WatchlistEntity
     {
+
         public int WatchlistId { get; set; }
 
-        [Required]
         public string? CoinName { get; set; }
 
         public int UserId { get; set; } // Foreign Key

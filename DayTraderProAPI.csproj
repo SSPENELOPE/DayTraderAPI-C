@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DayTraderProAPI.Application\DayTraderProAPI.Application.csproj" />
     <ProjectReference Include="..\DayTraderProAPI.Core\DayTraderProAPI.Core.csproj" />
     <ProjectReference Include="..\DayTraderProAPI.Infastructure\DayTraderProAPI.Infastructure.csproj" />
   </ItemGroup>

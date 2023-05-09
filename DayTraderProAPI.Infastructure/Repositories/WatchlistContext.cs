@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DayTraderProAPI.Infastructure.Identity
+namespace DayTraderProAPI.Infastructure.Repositories
 {
     public class WatchlistContext : DbContext
     {

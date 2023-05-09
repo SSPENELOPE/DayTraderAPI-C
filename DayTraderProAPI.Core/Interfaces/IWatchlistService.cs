@@ -9,8 +9,8 @@ namespace DayTraderProAPI.Core.Interfaces
 {
     public interface IWatchlistService
     {
-        Task<IEnumerable<WatchlistEntity>> GetWatchlistItemsAsync(string userId);
-        Task AddToWatchlistAsync(string userId, WatchlistEntity watchlistItem);
-        Task RemoveFromWatchlistAsync(string userId, int watchlistItemId);
+        Task<List<WatchlistEntity>> GetWatchlistItemsAsync(int userId);
+        Task<WatchlistEntity> AddToWatchlistAsync(int userId, WatchlistEntity watchlistItem);
+        Task RemoveFromWatchlistAsync(int userId, int WatchlistId);
     }
 }

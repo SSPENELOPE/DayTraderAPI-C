@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "secrets2": {
+      "restored": true,
+      "restoreTime": "2023-05-10T16:54:35.7122234Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2023-05-10T17:27:20.8805009Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2023-05-10T16:52:27.3224814Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "5f3c5a7b-82be-4e53-a6bf-51f77e227529"
+    },
+    "secrets1.resourceGroupName": {
+      "Name": "secrets1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "DayTraderProAPIvaultResourceGroup"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "DayTraderPro"
+    },
+    "secrets1.subscriptionId": {
+      "Name": "secrets1.subscriptionId",
+      "Type": "subscription",
+      "Value": "5f3c5a7b-82be-4e53-a6bf-51f77e227529"
+    }
+  }
+}

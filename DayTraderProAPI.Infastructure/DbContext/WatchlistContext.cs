@@ -11,10 +11,7 @@ namespace DayTraderProAPI.Infastructure.Repositories
 {
     public class WatchlistContext : DbContext
     {
-        public WatchlistContext(DbContextOptions<WatchlistContext> options) : base(options)
-        {
-
-        }
+        public WatchlistContext(DbContextOptions<WatchlistContext> options) : base(options) { }
 
         public DbSet<WatchlistEntity> WatchlistEntities { get; set; }
     }

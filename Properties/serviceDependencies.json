@@ -5,13 +5,13 @@
       "connectionId": "VaultUri",
       "dynamicId": null
     },
-    "secrets2": {
-      "type": "secrets",
-      "connectionId": null
-    },
     "mssql1": {
       "type": "mssql",
       "connectionId": "DayTraderDB"
+    },
+    "secrets2": {
+      "type": "secrets",
+      "connectionId": null
     }
   }
 }

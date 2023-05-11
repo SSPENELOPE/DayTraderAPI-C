@@ -1,4 +1,5 @@
-﻿using DayTraderProAPI.Infastructure.Identity;
+﻿using DayTraderProAPI.Infastructure.Data;
+using DayTraderProAPI.Infastructure.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace DayTraderProAPI
@@ -13,6 +14,9 @@ namespace DayTraderProAPI
 
             try
             {
+                var appDbContext = services.GetService<AppDbContext>();
+                appDbContext.Database.MigrateAsync();
+
                 var identityContext = services.GetRequiredService<IdentityContext>();
                 identityContext.Database.MigrateAsync();
             }

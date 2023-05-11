@@ -1,7 +1,11 @@
-﻿using DayTraderProAPI.Infastructure.Identity;
-using DayTraderProAPI.Infastructure.Repositories;
+﻿using DayTraderProAPI.Application.CustomService;
+using DayTraderProAPI.Core.Interfaces;
+using DayTraderProAPI.Dtos;
+using DayTraderProAPI.Infastructure.Data;
+using DayTraderProAPI.Infastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
 
 namespace DayTraderProAPI
@@ -15,15 +19,21 @@ namespace DayTraderProAPI
             services.AddDbContext<IdentityContext>(options =>
                 options.UseSqlServer(dbConn));
 
-            services.AddDbContext<WatchlistContext>(options =>
+            services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(dbConn));
 
-            services.AddDbContext<OrderContext>(options =>
-                options.UseSqlServer(dbConn));
         }
 
-        public static void AddIdentityAndControllers(this IServiceCollection services)
+        public static void AddIdentityAndControllers(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddScoped<IMarketSubscription, MarketDataSubscription>();
+
+            services.AddScoped<IMarketSubscription>(provider =>
+            {
+                var apiKey = configuration.GetSection("CBKey").Value;
+                return new MarketDataSubscription(apiKey);
+            });
+
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityContext>()
                 .AddDefaultTokenProviders();
@@ -44,6 +54,11 @@ namespace DayTraderProAPI
                     policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("*");
                 });
             });
+        }
+
+        public static void AddConfigurationKeys(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.Configure<CBApiKeyDto>(configuration.GetSection("CBKey"));
         }
     }
 }

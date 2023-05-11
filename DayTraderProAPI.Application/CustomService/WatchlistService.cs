@@ -1,6 +1,6 @@
 ﻿using DayTraderProAPI.Core.Entities;
 using DayTraderProAPI.Core.Interfaces;
-using DayTraderProAPI.Infastructure.Repositories;
+using DayTraderProAPI.Infastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace DayTraderProAPI.Application.CustomService

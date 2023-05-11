@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DayTraderProAPI.Core.Entities.Identity;
 
 namespace DayTraderProAPI.Core.Entities
 {
@@ -19,6 +14,8 @@ namespace DayTraderProAPI.Core.Entities
 
         public string? OrderType { get; set; }
 
-        public int UserId { get; set; } // Foreign Key
+        public int AppUserId { get; set; } // Foreign Key
+
+        public AppUser AppUser { get; set; } // Navigation Property
     }
 }

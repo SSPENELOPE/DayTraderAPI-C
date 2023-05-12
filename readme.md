@@ -9,7 +9,10 @@
 - More to come later. However this is not intended for use by others
 
 # Changelog
+### 5/12/2023
+* Started creating the OrderController and OrderService, OrderService and Entity/Aggregate will be need to restructured slightly. The GUID of each order will need to be saved in order to sure we transmit the correct cancellation or fulfilments 
 
+---
 ### 5/11/2023 
 * The magic click happened where I finally understand clean architecture so the speed at which I create this will happen much quicker (Thank Lord)
 * Updated many services, created the Subscription service that was necessary to continuously receive market data from the coinbase API.

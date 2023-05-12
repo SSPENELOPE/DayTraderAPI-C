@@ -24,7 +24,7 @@ namespace DayTraderProAPI.Application.CustomService
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Email, appUser.Email),
-                new Claim("userId", appUser.UserId.ToString())
+                new Claim(ClaimTypes.GivenName, appUser.UserName)
             };
             var cred = new SigningCredentials(_Key, SecurityAlgorithms.HmacSha512Signature);
             var TokenDesc = new SecurityTokenDescriptor

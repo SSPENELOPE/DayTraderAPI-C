@@ -18,6 +18,10 @@
       "resourceId": null,
       "type": "secrets.user",
       "connectionId": null
+    },
+    "identityapp1": {
+      "type": "identityapp.default",
+      "dynamicId": null
     }
   }
 }

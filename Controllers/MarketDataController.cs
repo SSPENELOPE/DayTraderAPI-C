@@ -37,8 +37,8 @@ namespace DayTraderProAPI.Controllers
         public IActionResult SubscribeToMarketData() 
         {
             _marketSubscription.SubscribeToMarketData(OnMarketDataReceived);
-
-            return Ok("Subscripton Successful"); 
+       
+            return Ok("Subscripton Successful" + _marketDataQueue); 
         }
 
         [HttpGet(nameof(GetMarketData))]

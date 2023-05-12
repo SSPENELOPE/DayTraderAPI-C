@@ -12,6 +12,10 @@
     "secrets2": {
       "type": "secrets",
       "connectionId": null
+    },
+    "identityapp1": {
+      "type": "identityapp",
+      "dynamicId": null
     }
   }
 }

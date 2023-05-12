@@ -13,6 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayTraderProAPI.Core", "..\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{97C73807-C92B-48C4-B424-AAECBC9D3A16}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		readme.md = readme.md
 	EndProjectSection
 EndProject
@@ -21,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayTraderProAPI.Infastructu
 		{BD8684A8-2D42-4599-BAE7-A360C57E4EE3} = {BD8684A8-2D42-4599-BAE7-A360C57E4EE3}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTraderProAPI.Application", "..\DayTraderProAPI.Application\DayTraderProAPI.Application.csproj", "{F55522F7-7A26-422E-9A3C-6C5529BB821D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayTraderProAPI.Application", "..\DayTraderProAPI.Application\DayTraderProAPI.Application.csproj", "{F55522F7-7A26-422E-9A3C-6C5529BB821D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

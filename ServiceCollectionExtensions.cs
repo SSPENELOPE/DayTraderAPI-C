@@ -26,7 +26,9 @@ namespace DayTraderProAPI
 
         public static void AddIdentityAndControllers(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IMarketSubscription, MarketDataSubscription>();
+            services.AddScoped<IOrderService, OrderService>();
+
+            services.AddScoped<ITokenService, TokenService>();
 
             services.AddScoped<IMarketSubscription>(provider =>
             {
@@ -54,6 +56,7 @@ namespace DayTraderProAPI
                     policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("*");
                 });
             });
+
         }
 
         public static void AddConfigurationKeys(this IServiceCollection services, IConfiguration configuration)

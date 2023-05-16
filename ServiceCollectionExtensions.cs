@@ -26,14 +26,19 @@ namespace DayTraderProAPI
 
         public static void AddIdentityAndControllers(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IOrderService, OrderService>();
+            var apiKey = configuration.GetSection("CBKey").Value;
+            var secretKey = configuration.GetSection("CBSecret").Value;
+
+            services.AddScoped<IOrderService>(provider =>
+            {
+                return new OrderService(apiKey, secretKey);
+            });
 
             services.AddScoped<ITokenService, TokenService>();
 
             services.AddScoped<IMarketSubscription>(provider =>
             {
-                var apiKey = configuration.GetSection("CBKey").Value;
-                return new MarketDataSubscription(apiKey);
+                return new MarketDataSubscription(apiKey, secretKey);
             });
 
             services.AddIdentity<IdentityUser, IdentityRole>()

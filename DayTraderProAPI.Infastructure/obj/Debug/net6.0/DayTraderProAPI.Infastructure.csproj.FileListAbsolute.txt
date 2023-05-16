@@ -1,0 +1,17 @@
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\bin\Debug\net6.0\DayTraderProAPI.Infastructure.deps.json
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\bin\Debug\net6.0\DayTraderProAPI.Infastructure.runtimeconfig.json
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\bin\Debug\net6.0\DayTraderProAPI.Infastructure.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\bin\Debug\net6.0\DayTraderProAPI.Infastructure.pdb
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\bin\Debug\net6.0\DayTraderProAPI.Core.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\bin\Debug\net6.0\DayTraderProAPI.Core.pdb
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\DayTraderProAPI.Infastructure.csproj.AssemblyReference.cache
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\DayTraderProAPI.Infastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\DayTraderProAPI.Infastructure.AssemblyInfoInputs.cache
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\DayTraderProAPI.Infastructure.AssemblyInfo.cs
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\DayTraderProAPI.Infastructure.csproj.CoreCompileInputs.cache
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\DayTraderProAPI.Infastructure.csproj.CopyComplete
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\DayTraderProAPI.Infastructure.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\refint\DayTraderProAPI.Infastructure.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\DayTraderProAPI.Infastructure.pdb
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\DayTraderProAPI.Infastructure.genruntimeconfig.cache
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Infastructure\obj\Debug\net6.0\ref\DayTraderProAPI.Infastructure.dll

@@ -9,6 +9,8 @@ namespace DayTraderProAPI.Core.Entities.Identity
 
         public string? LastName { get; set; }
 
+        public string? CBAccessKey { get; set; }
+
         public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
 
         public DateTime? LastUpdatedAt { get; set; } = DateTime.UtcNow;

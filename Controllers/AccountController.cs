@@ -26,8 +26,10 @@ namespace DayTraderProAPI.Controllers
         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenService tokenService)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenService tokenService, IMapper 
+            mapper)
         {
+            _mapper = mapper;
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenService = tokenService;

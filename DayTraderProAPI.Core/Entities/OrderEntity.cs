@@ -1,10 +1,13 @@
 ﻿using DayTraderProAPI.Core.Entities.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace DayTraderProAPI.Core.Entities
 {
     public class OrderEntity : BaseEntity
     {
-        public int OrderId { get; set; }
+        [Key]
+        public int OrderId { get; set; } // Primary Key
+        public string? OrderGuid { get; set; }
 
         public string? CoinName { get; set; }
 
@@ -14,7 +17,7 @@ namespace DayTraderProAPI.Core.Entities
 
         public string? OrderType { get; set; }
 
-        public int AppUserId { get; set; } // Foreign Key
+        public string? AppUserId { get; set; } // Foreign Key
 
         public AppUser AppUser { get; set; } // Navigation Property
     }

@@ -1,0 +1,14 @@
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\bin\Debug\net6.0\DayTraderProAPI.Core.deps.json
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\bin\Debug\net6.0\DayTraderProAPI.Core.runtimeconfig.json
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\bin\Debug\net6.0\DayTraderProAPI.Core.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\bin\Debug\net6.0\DayTraderProAPI.Core.pdb
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\DayTraderProAPI.Core.csproj.AssemblyReference.cache
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\DayTraderProAPI.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\DayTraderProAPI.Core.AssemblyInfoInputs.cache
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\DayTraderProAPI.Core.AssemblyInfo.cs
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\DayTraderProAPI.Core.csproj.CoreCompileInputs.cache
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\DayTraderProAPI.Core.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\refint\DayTraderProAPI.Core.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\DayTraderProAPI.Core.pdb
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\DayTraderProAPI.Core.genruntimeconfig.cache
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI.Core\obj\Debug\net6.0\ref\DayTraderProAPI.Core.dll

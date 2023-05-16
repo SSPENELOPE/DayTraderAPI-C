@@ -14,9 +14,11 @@ namespace DayTraderProAPI.Application.CustomService
         private const string WebSocketUrl = "wss://ws-feed.pro.coinbase.com";
         private const string BaseUrl = "https://api.coinbase.com/v2";
         private readonly string _apiKey;
+        private readonly string _secretKey;
 
-        public MarketDataSubscription(string apiKey)
+        public MarketDataSubscription(string apiKey, string secretKey)
         {
+            _secretKey = secretKey;
             _apiKey = apiKey;
         }
 

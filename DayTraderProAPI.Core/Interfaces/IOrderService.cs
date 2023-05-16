@@ -11,21 +11,22 @@ namespace DayTraderProAPI.Core.Interfaces
     public interface IOrderService
     {
         // Create Order
-        Task<Order> CreateOrderAsync(
-            int UserId,
+        Task<OrderEntity> CreateOrderAsync(
+            string AppUserId,
             string OrderType,
             decimal OrderAmount,
             string OrderDirection,
-            string CoinName
+            string CoinName,
+            string CBAccessKey
         );
 
         // Cancel Order
-        Task<Order> CancelOrderAsync(
-          int UserId,
-          int OrderId
+        Task<OrderEntity> CancelOrderAsync(
+          string OrderGuid,
+          string CBAccessKey
             );
 
         // Retrieve Users Orders
-        Task<List<OrderEntity>> GetOrdersAsync(int UserId);
+        Task<List<OrderEntity>> GetOrdersAsync(string AppUserId);
     }
 }

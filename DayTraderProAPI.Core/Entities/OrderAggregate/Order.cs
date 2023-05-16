@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DayTraderProAPI.Core.Entities.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,6 @@ namespace DayTraderProAPI.Core.Entities.OrderAggregate
             OrderType = orderType;
         }
 
-        public int UserId { get; set; }
 
         public string OrderType { get; set; }
 
@@ -35,5 +35,9 @@ namespace DayTraderProAPI.Core.Entities.OrderAggregate
         public decimal OrderAmount { get; set; }
 
         public DateTime OrderDate { get; set; } = DateTime.Now;
+
+        public int AppUserId { get; set; } // Foreign Key
+
+        public AppUser AppUser { get; set; } // Navigation Property
     }
 }

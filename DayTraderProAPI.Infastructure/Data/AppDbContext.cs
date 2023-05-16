@@ -34,9 +34,14 @@ namespace DayTraderProAPI.Infastructure.Data
 
         private void ConfigureOrderEntity(EntityTypeBuilder<OrderEntity> builder)
         {
+            builder.Property(o => o.OrderAmount)
+                .HasColumnType("decimal(18, 2)")
+                .HasPrecision(5);
+
             builder.Property(e => e.OrderId)
                 .ValueGeneratedOnAdd()
                 .UseIdentityColumn(1, 1);
+
         }
 
         private void ConfigureWatchlistEntity(EntityTypeBuilder<WatchlistEntity> builder)

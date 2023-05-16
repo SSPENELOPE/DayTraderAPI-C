@@ -10,9 +10,9 @@ using Microsoft.Identity.Web;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration
-    .AddJsonFile("Secrets.json")
-    .AddUserSecrets<Program>()
-    .AddAzureKeyVault(new Uri(Environment.GetEnvironmentVariable("VaultUri")), new DefaultAzureCredential());
+    .AddJsonFile("secrets.json", optional: true, reloadOnChange: true)
+    .AddUserSecrets<Program>();
+    /*.AddAzureKeyVault(new Uri(Environment.GetEnvironmentVariable("VaultUri")), new DefaultAzureCredential());*/
 
 builder.Services.AddDbContexts(builder.Configuration);
 
@@ -29,8 +29,19 @@ app.MigrateIdentityContext();
 
 // Configure the HTTP request pipeline.
 
-app.UseCors("CorsPolicy")
-   .UseHttpsRedirection()
-   .UseAuthorization();
-app.MapControllers();
+if (!app.Environment.IsDevelopment())
+{
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseCors("CorsPolicy");
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 app.Run();

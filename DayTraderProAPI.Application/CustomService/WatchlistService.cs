@@ -1,4 +1,5 @@
 ﻿using DayTraderProAPI.Core.Entities;
+using DayTraderProAPI.Core.Entities.Identity;
 using DayTraderProAPI.Core.Interfaces;
 using DayTraderProAPI.Infastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -8,35 +9,35 @@ namespace DayTraderProAPI.Application.CustomService
     public class WatchlistService : IWatchlistService
     {
     
-        private readonly WatchlistContext _watchlistContext;
+        private readonly AppDbContext _dbContext;
 
-        public WatchlistService(WatchlistContext watchlistContext)
+        public WatchlistService(AppDbContext dbContext)
         {
-            _watchlistContext = watchlistContext;
+            _dbContext = dbContext;
         }
 
-        public async Task<List<WatchlistEntity>> GetWatchlistItemsAsync(int userId)
+        public async Task<List<WatchlistEntity>> GetWatchlistItemsAsync(string AppUserId)
         {
-            return await _watchlistContext.WatchlistEntities.Where(w => w.UserId == userId).ToListAsync();
+            return await _dbContext.WatchlistEntities.Where(w => w.AppUserId == AppUserId).ToListAsync();
         }
 
-        public async Task<WatchlistEntity> AddToWatchlistAsync(int userId, WatchlistEntity watchlistItem)
+        public async Task<WatchlistEntity> AddToWatchlistAsync(string AppUserId, WatchlistEntity watchlistItem)
         {
-            watchlistItem.UserId = userId;
-            _watchlistContext.WatchlistEntities.Add(watchlistItem);
-            await _watchlistContext.SaveChangesAsync();
+            watchlistItem.AppUserId = AppUserId;
+            _dbContext.WatchlistEntities.Add(watchlistItem);
+            await _dbContext.SaveChangesAsync();
             return watchlistItem;
         }
 
-        public async Task RemoveFromWatchlistAsync(int userId, int watchlistId)
+        public async Task RemoveFromWatchlistAsync(string AppUserId, int watchlistId)
         {
-            var watchlistItem = await _watchlistContext.WatchlistEntities
-                .SingleOrDefaultAsync(w => w.UserId == userId && w.WatchlistId == watchlistId);
+            var watchlistItem = await _dbContext.WatchlistEntities
+                .SingleOrDefaultAsync(w => w.AppUserId == AppUserId && w.WatchlistId == watchlistId);
 
             if (watchlistItem != null)
             {
-                _watchlistContext.WatchlistEntities.Remove(watchlistItem);
-                await _watchlistContext.SaveChangesAsync();
+                _dbContext.WatchlistEntities.Remove(watchlistItem);
+                await _dbContext.SaveChangesAsync();
             }
         }
     }

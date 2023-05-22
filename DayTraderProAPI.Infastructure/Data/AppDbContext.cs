@@ -12,6 +12,22 @@ namespace DayTraderProAPI.Infastructure.Data
         public DbSet<AppUser> Users { get; set; }
         public DbSet<WatchlistEntity> WatchlistEntities { get; set; }
         public DbSet<OrderEntity> OrderEntities { get; set; }
+        private void ConfigureOrderEntity(EntityTypeBuilder<OrderEntity> builder)
+        {
+            builder.Property(o => o.OrderAmount)
+                .HasColumnType("decimal(18, 2)");
+
+            builder.Property(e => e.OrderId)
+                .ValueGeneratedOnAdd()
+                .UseIdentityColumn(1, 1);
+        }
+
+        private void ConfigureWatchlistEntity(EntityTypeBuilder<WatchlistEntity> builder)
+        {
+            builder.Property(e => e.WatchlistId)
+                .ValueGeneratedOnAdd()
+                .UseIdentityColumn(1, 1);
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,23 +48,5 @@ namespace DayTraderProAPI.Infastructure.Data
             modelBuilder.Entity<OrderEntity>(ConfigureOrderEntity);
         }
 
-        private void ConfigureOrderEntity(EntityTypeBuilder<OrderEntity> builder)
-        {
-            builder.Property(o => o.OrderAmount)
-                .HasColumnType("decimal(18, 2)")
-                .HasPrecision(5);
-
-            builder.Property(e => e.OrderId)
-                .ValueGeneratedOnAdd()
-                .UseIdentityColumn(1, 1);
-
-        }
-
-        private void ConfigureWatchlistEntity(EntityTypeBuilder<WatchlistEntity> builder)
-        {
-            builder.Property(e => e.WatchlistId)
-                .ValueGeneratedOnAdd()
-                .UseIdentityColumn(1, 1);
-        }
     }
 }

@@ -14,25 +14,28 @@ using DayTraderProAPI.Models;
 using System.IdentityModel.Tokens.Jwt;
 using DayTraderProAPI.Errors;
 using DayTraderProAPI.Erros;
+using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
 
 namespace DayTraderProAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountController : BaseApiController
+    public class AccountController : Controller
     {
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
+        private readonly ICoinBaseSignIn _coinBaseSignIn;
 
         public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenService tokenService, IMapper 
-            mapper)
+            mapper, ICoinBaseSignIn coinBaseSignIn)
         {
             _mapper = mapper;
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenService = tokenService;
+            _coinBaseSignIn = coinBaseSignIn;
         }
 
         [Authorize]
@@ -65,6 +68,7 @@ namespace DayTraderProAPI.Controllers
             if (!result.Succeeded) return Unauthorized(new APIResponce(401));
             return new UserDto
             {
+                AppUserId = user.Id,
                 Email = user.Email,
                 UserName = user.UserName,
                 Token = _tokenService.CreateToken(user)
@@ -97,6 +101,13 @@ namespace DayTraderProAPI.Controllers
                 Email = user.Email,
                 Token = _tokenService.CreateToken(user)
             };
+        }
+
+        [HttpGet(nameof(ConnectAccountAsync))]
+        public async Task<ActionResult> ConnectAccountAsync(UserDto userDto)
+        {
+           var tempcode = await _coinBaseSignIn.RequestTemporaryCode();
+            return Ok(tempcode);
         }
     }
 }

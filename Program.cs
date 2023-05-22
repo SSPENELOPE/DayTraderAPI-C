@@ -22,12 +22,24 @@ builder.Services.AddConfigurationKeys(builder.Configuration);
 
 builder.Services.AddIdentityService(builder.Configuration);
 
+/*builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("*");
+    });
+});*/
+
 var app = builder.Build();
 
 
 app.MigrateIdentityContext();
 
 // Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
 
 if (!app.Environment.IsDevelopment())
 {
@@ -35,9 +47,12 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseWebSockets();
+app.UseStatusCodePagesWithReExecute("/error/{0}");
 app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseEndpoints(endpoints =>

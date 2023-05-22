@@ -1,5 +1,7 @@
 ﻿using DayTraderProAPI.Core.Entities.Identity;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DayTraderProAPI.Core.Entities
 {
@@ -11,6 +13,7 @@ namespace DayTraderProAPI.Core.Entities
 
         public string? CoinName { get; set; }
 
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal OrderAmount { get; set; }
 
         public string? OrderDirection { get; set; }

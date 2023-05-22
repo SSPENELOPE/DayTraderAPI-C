@@ -19,18 +19,12 @@ namespace DayTraderProAPI.Application.CustomService
     {
   
         private readonly AppDbContext _dbContext;
-        private readonly string? apiKey;
-        private readonly string? secretKey;
+        private readonly string _secretKey;
 
-        public OrderService(AppDbContext dbContext)
+        public OrderService(AppDbContext dbContext, string secretKey)
         {
             _dbContext = dbContext;
-        }
-
-        public OrderService(string? apiKey, string? secretKey)
-        {
-            this.apiKey = apiKey;
-            this.secretKey = secretKey;
+            _secretKey = secretKey;
         }
 
         // CREATE ORDER
@@ -54,7 +48,7 @@ namespace DayTraderProAPI.Application.CustomService
             string payload = $"{clientOrderId}{productId}{side}{quoteSize}{stopDirection}";
 
             // Create a SHA256 HMAC with the secret
-            string signature = GenerateSignature(payload, secretKey);
+            string signature = GenerateSignature(payload, _secretKey);
 
             string timestamp = DateTimeOffset.Now.ToUnixTimeSeconds().ToString();
 
@@ -126,7 +120,7 @@ namespace DayTraderProAPI.Application.CustomService
             string payload = $"{OrderGuid}{timestamp}";
 
             // Create a SHA256 HMAC with the secret
-            string signature = GenerateSignature(payload, secretKey);
+            string signature = GenerateSignature(payload, _secretKey);
 
             using HttpClient client = new();
             client.BaseAddress = new Uri(url);

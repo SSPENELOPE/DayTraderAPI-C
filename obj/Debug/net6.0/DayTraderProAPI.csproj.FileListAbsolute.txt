@@ -29,7 +29,6 @@ C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\M
 C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
@@ -114,3 +113,7 @@ C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\obj\Debug\net6.0\r
 C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\obj\Debug\net6.0\DayTraderProAPI.pdb
 C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\obj\Debug\net6.0\DayTraderProAPI.genruntimeconfig.cache
 C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\obj\Debug\net6.0\ref\DayTraderProAPI.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Humanizer.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\TJ\Desktop\Web Apps\DayTraderPro-TBD\DayTraderProAPI\bin\Debug\net6.0\System.CodeDom.dll

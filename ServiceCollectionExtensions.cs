@@ -1,6 +1,7 @@
 ﻿using DayTraderProAPI.Application.CustomService;
 using DayTraderProAPI.Core.Interfaces;
 using DayTraderProAPI.Dtos;
+using DayTraderProAPI.Helpers;
 using DayTraderProAPI.Infastructure.Data;
 using DayTraderProAPI.Infastructure.Identity;
 using Microsoft.AspNetCore.Identity;
@@ -14,7 +15,7 @@ namespace DayTraderProAPI
     {
         public static void AddDbContexts(this IServiceCollection services, IConfiguration configuration)
         {
-            var dbConn = configuration.GetConnectionString("DbConn");
+            var dbConn = configuration.GetConnectionString("DefaultConnection");
 
             services.AddDbContext<IdentityContext>(options =>
                 options.UseSqlServer(dbConn));
@@ -28,10 +29,16 @@ namespace DayTraderProAPI
         {
             var apiKey = configuration.GetSection("CBKey").Value;
             var secretKey = configuration.GetSection("CBSecret").Value;
+            var clientSecret = configuration.GetSection("ClientSecret").Value;
 
             services.AddScoped<IOrderService>(provider =>
             {
-                return new OrderService(apiKey, secretKey);
+                return new OrderService(provider.GetService<AppDbContext>(),secretKey);
+            });
+
+            services.AddScoped<ICoinBaseSignIn>(provider =>
+            {
+                return new CoinBaseSignInService(provider.GetService<HttpClient>(), provider.GetService<IdentityContext>(), clientSecret);
             });
 
             services.AddScoped<ITokenService, TokenService>();
@@ -51,8 +58,10 @@ namespace DayTraderProAPI
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                     options.SerializerSettings.ContractResolver = new DefaultContractResolver();
                 });
-
+            
             services.AddControllers();
+
+            services.AddAutoMapper(typeof(MappingProfiles));
 
             services.AddCors(options =>
             {

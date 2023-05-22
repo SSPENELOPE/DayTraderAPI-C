@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DayTraderProAPI.Core.Entities;
+using Microsoft.AspNetCore.Mvc;
 using System; 
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,9 @@ namespace DayTraderProAPI.Core.Interfaces
     public interface ICoinBaseSignIn
     {
         // response_type = code
-        Task<ActionResult> RequestTemporaryCode(string response_type, string client_id);
+        Task<string> RequestTemporaryCode();
 
         // grant_type = authorization_code
-        Task<ActionResult> RequestAccesKey(
-            string grant_type, 
-            string temporary_code, 
-            string client_id, 
-            string client_secret,
-            string redirect_uri);
+        Task<AccessResponse> RequestAccessKey(string AppUserId);
     }
 }
